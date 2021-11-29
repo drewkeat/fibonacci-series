@@ -1,5 +1,14 @@
 def fibonacci(num)
-  # type your code in here
+  fib = [0,1]
+  if num == 0 || num == 1
+    return fib[num]
+  end
+
+  while fib.length < num + 1 do 
+    fib.push(fib[-2] + fib[-1])
+  end
+
+  return fib[num]
 end
 
 if __FILE__ == $PROGRAM_NAME
